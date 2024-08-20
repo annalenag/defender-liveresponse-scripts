@@ -29,9 +29,13 @@ Write-Host -fore Green "
 AV DETECTION STATUS:
 "
 
-$AV_status = Get-MpThreatDetection 
-Write-Output $AV_status
+$AV_status = Get-MpThreatDetection
+if([string]::IsNullOrWhitespace($AV_status)) {
+  Write-Output "There is no active threats in Defender AV."
+  Exit
+}
 
+Write-Output $AV_status
 
 # Create output path if it doesn't exist
 if (-Not (Test-Path -Path $output_path)) {
