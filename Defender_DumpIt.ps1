@@ -1,6 +1,6 @@
 <#
 	.NOTES
-	RAM_DumpIt.ps1
+	Defender_DumpIt.ps1
 	Anna Lena G.
 	v1.0
 	
@@ -8,8 +8,8 @@
 	Script creates RAM dump with DumpIt.exe from the Defender Live Response console.
 	
 	.EXAMPLE
-	PS> put RAM_DumpIt.ps1 -overwrite
-	PS> run RAM_DumpIt.ps1
+	PS> put Defender_DumpIt.ps1 -overwrite
+	PS> run Defender_DumpIt.ps1
 	
 #>
 Write-Host "
